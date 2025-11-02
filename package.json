@@ -8,7 +8,8 @@
     "start": "electron .",
     "dev": "electron .",
     "pack": "electron-packager . xiyou-wrapper --platform=win32 --arch=x64 --out=dist --overwrite",
-    "pack:win": "electron-packager . xiyou-wrapper --platform=win32 --arch=x64 --out=dist --overwrite"
+    "pack:win": "electron-packager . xiyou-wrapper --platform=win32 --arch=x64 --out=dist --overwrite",
+  "pack:min": "electron-packager . xiyou-wrapper --platform=win32 --arch=x64 --out=dist --overwrite --asar --prune=true --no-deref-symlinks"
   },
   "author": "",
   "license": "MIT",
@@ -16,10 +17,8 @@
     "electron-store": "^9.0.0"
   },
   "devDependencies": {
-    "electron": "^31.0.0",
     "@electron/packager": "^18.3.5",
+    "electron": "^31.0.0",
     "electron-packager": "^17.1.2"
   }
 }
-
-
