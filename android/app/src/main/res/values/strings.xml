@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">xiyou-wrapper</string>
+    <string name="title_activity_main">xiyou-wrapper</string>
+    <string name="package_name">com.xiyou.wrapper</string>
+    <string name="custom_url_scheme">com.xiyou.wrapper</string>
+</resources>

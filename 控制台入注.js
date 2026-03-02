@@ -1,10 +1,4 @@
-// xiyou injection: Vue component control buttons
-console.log('[xiyou] injection loaded');
-
 (function() {
-  // Device detection for mobile
-  const isMobile = window.innerWidth < 768 || /Android/i.test(navigator.userAgent);
-  console.log('[xiyou] Device type:', isMobile ? 'Mobile' : 'Desktop');
   // 配置：需要运行的路径
   const ALLOWED_PATHS = [
     'mock-paper',     // 模拟试卷
@@ -326,12 +320,12 @@ console.log('[xiyou] injection loaded');
 
     buttonNext.addEventListener('click', function (ev) {
       console.log('[xiyou] 下一步 按钮被点击', ev);
-  // 优先使用显式目标实例（更可靠），其次使用之前的解析策略
-  const target = getTargetVue();
-  let resolved = resolveVueInstance();
-  let inst = target || vueInstance || (resolved && resolved.inst) || null;
+      // 优先使用显式目标实例（更可靠），其次使用之前的解析策略
+      const target = getTargetVue();
+      let resolved = resolveVueInstance();
+      let inst = target || vueInstance || (resolved && resolved.inst) || null;
       if (resolved && resolved.foundOn) console.log('[xiyou] 下一步 resolved on element:', resolved.foundOn);
-  if (target) console.log('[xiyou] 下一步 target vue instance found via getTargetVue()', target);
+      if (target) console.log('[xiyou] 下一步 target vue instance found via getTargetVue()', target);
       if (inst) {
         try {
           // 支持设在不同位置：实例自身或 $data
@@ -386,11 +380,11 @@ console.log('[xiyou] injection loaded');
 
     buttonPause.addEventListener('click', function (ev) {
       console.log('[xiyou] 暂停 按钮被点击', ev);
-  const target = getTargetVue();
-  let resolved = resolveVueInstance();
-  let inst = target || vueInstance || (resolved && resolved.inst) || null;
-  if (resolved && resolved.foundOn) console.log('[xiyou] 暂停 resolved on element:', resolved.foundOn);
-  if (target) console.log('[xiyou] 暂停 target vue instance found via getTargetVue()', target);
+      const target = getTargetVue();
+      let resolved = resolveVueInstance();
+      let inst = target || vueInstance || (resolved && resolved.inst) || null;
+      if (resolved && resolved.foundOn) console.log('[xiyou] 暂停 resolved on element:', resolved.foundOn);
+      if (target) console.log('[xiyou] 暂停 target vue instance found via getTargetVue()', target);
       if (inst) {
         try {
           if ('audioTime' in inst) {
@@ -482,4 +476,3 @@ console.log('[xiyou] injection loaded');
   window.addEventListener('hashchange', checkNavigation);
   window.addEventListener('popstate', checkNavigation);
 })();
-

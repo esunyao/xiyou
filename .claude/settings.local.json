@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npx cap:*)",
+      "Bash(./gradlew clean:*)",
+      "Bash(./gradlew assembleDebug:*)",
+      "Bash(java:*)",
+      "Bash(where java:*)",
+      "Bash(JAVA_HOME=\"D:/Users/Esuny/.jdks/azul-21.0.4\" ./gradlew assembleDebug:*)",
+      "Bash(adb install:*)",
+      "Bash(adb logcat:*)"
+    ]
+  }
+}

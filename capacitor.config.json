@@ -1,0 +1,8 @@
+{
+  "appId": "com.xiyou.wrapper",
+  "appName": "xiyou-wrapper",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  }
+}

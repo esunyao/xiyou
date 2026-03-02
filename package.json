@@ -9,11 +9,19 @@
     "dev": "electron .",
     "pack": "electron-packager . xiyou-wrapper --platform=win32 --arch=x64 --out=dist --overwrite",
     "pack:win": "electron-packager . xiyou-wrapper --platform=win32 --arch=x64 --out=dist --overwrite",
-  "pack:min": "electron-packager . xiyou-wrapper --platform=win32 --arch=x64 --out=dist --overwrite --asar --prune=true --no-deref-symlinks"
+    "pack:min": "electron-packager . xiyou-wrapper --platform=win32 --arch=x64 --out=dist --overwrite --asar --prune=true --no-deref-symlinks",
+    "cap:sync": "npx cap sync android",
+    "cap:open": "npx cap open android",
+    "cap:init": "npx cap init xiyou-wrapper com.xiyou.wrapper --web-dir=.",
+    "git:watch": "node scripts/git-auto-commit.js"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@capacitor/android": "^8.1.0",
+    "@capacitor/cli": "^8.1.0",
+    "@capacitor/core": "^8.1.0",
+    "chokidar": "^5.0.0",
     "electron-store": "^9.0.0"
   },
   "devDependencies": {
